@@ -1,0 +1,49 @@
+<section id="meet-whitney" class="whitney">
+  <div class="container whitney__grid">
+    <div class="whitney__media">
+      <!-- Swap this placeholder for public/images/whitney-photo.jpg -->
+      <div class="whitney__photo" role="img" aria-label="Whitney Hughes outside Benbrook City Hall">
+        <span class="whitney__photo-initial">WH</span>
+      </div>
+
+      <ul class="whitney__facts">
+        @for (fact of facts; track fact.label) {
+          <li>
+            <span class="whitney__fact-icon" aria-hidden="true">{{ fact.icon }}</span>
+            <span>{{ fact.label }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="whitney__content">
+      <p class="eyebrow whitney__eyebrow">Meet Your Candidate — Place 6</p>
+      <h2 class="section-heading whitney__name">Whitney Hughes</h2>
+      <p class="whitney__role">for Benbrook City Council, Place 6</p>
+
+      <blockquote class="whitney__bio">
+        Born in Benbrook in 1988, I've spent the majority of my life in and around
+        this city. I attended Leonard Middle School and graduated from Western
+        Hills High School in 2006 before commuting to the University of North
+        Texas for a degree in Communication Studies.
+        <br /><br />
+        My husband, Sam, and I have one son, and we're thrilled to continue
+        calling Benbrook home. I'm a proud BASIS Benbrook mom!
+        <br /><br />
+        I enjoy playing the piano, embroidery, photography, attending renaissance
+        faires, and swimming.
+      </blockquote>
+
+      <h3 class="whitney__pledge">Leading with Honesty, Integrity, and Transparency</h3>
+
+      <div class="whitney__priorities">
+        <h4>Our Priorities for a Stronger Benbrook</h4>
+        <ul>
+          @for (priority of priorities; track priority.text) {
+            <li>{{ priority.text }}</li>
+          }
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

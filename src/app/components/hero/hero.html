@@ -1,0 +1,44 @@
+<section id="home" class="hero">
+  <div class="hero__stars" aria-hidden="true">
+    @for (star of [1,2,3,4,5,6,7]; track star) {
+      <span class="hero__star"></span>
+    }
+  </div>
+
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow hero__eyebrow">Benbrook City Council</p>
+      <h1 class="hero__title">One Benbrook</h1>
+      <p class="hero__tagline">Two places. One shared vision.</p>
+      <p class="hero__lead">
+        Every resident has value. Every neighborhood deserves leadership built on
+        honesty, integrity, and transparency.
+      </p>
+
+      <div class="hero__candidates">
+        <a class="hero__candidate hero__candidate--red" href="#meet-greg">
+          <span class="hero__candidate-label">Place 4</span>
+          <span class="hero__candidate-name">Greg Clem</span>
+        </a>
+        <span class="hero__divider" aria-hidden="true"></span>
+        <a class="hero__candidate hero__candidate--navy" href="#meet-whitney">
+          <span class="hero__candidate-label">Place 6</span>
+          <span class="hero__candidate-name">Whitney Hughes</span>
+        </a>
+      </div>
+
+      <div class="hero__actions">
+        <a class="btn btn-primary" href="#meet-whitney">Meet Whitney</a>
+        <a class="btn btn-outline" href="#meet-greg">Meet Greg</a>
+      </div>
+    </div>
+
+    <div class="hero__media">
+      <!-- Swap this placeholder for the campaign photo, e.g. public/images/hero-photo.jpg -->
+      <div class="hero__photo" role="img" aria-label="Greg Clem and Whitney Hughes outside Benbrook City Hall">
+        <span class="hero__photo-icon">🏛️</span>
+        <span class="hero__photo-caption">Photo: Greg &amp; Whitney at Benbrook City Hall</span>
+      </div>
+    </div>
+  </div>
+</section>

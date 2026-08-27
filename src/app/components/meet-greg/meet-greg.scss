@@ -1,0 +1,165 @@
+.greg {
+  background: var(--color-offwhite);
+  padding-block: var(--space-section);
+}
+
+.greg__header {
+  max-width: 42rem;
+}
+
+.greg__eyebrow {
+  color: var(--color-red);
+}
+
+.greg__title {
+  color: var(--color-navy);
+  margin-top: 0.6rem;
+}
+
+.greg__title-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  color: var(--color-red);
+}
+
+.greg__role {
+  margin-top: 0.5rem;
+  font-weight: 700;
+  color: var(--color-navy-light);
+}
+
+.greg__intro {
+  margin-top: 1rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+}
+
+.greg__body {
+  margin-top: 2.75rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+}
+
+.greg__col h3 {
+  color: var(--color-navy);
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid var(--color-red);
+  display: inline-block;
+}
+
+.greg__about-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  li {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+    background: var(--color-white);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1rem;
+    box-shadow: var(--shadow-sm);
+    font-size: 0.95rem;
+    color: var(--color-ink);
+  }
+}
+
+.greg__about-icon {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.greg__photo {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: linear-gradient(155deg, var(--color-navy-light), var(--color-navy));
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  outline: 3px solid var(--color-red);
+  outline-offset: 5px;
+}
+
+.greg__paragraph {
+  margin-top: 1rem;
+  font-size: 0.98rem;
+  color: var(--color-muted);
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.greg__beliefs {
+  margin-top: 3rem;
+  background: var(--color-navy);
+  border-radius: var(--radius-md);
+  padding: 1.75rem 2rem;
+  color: var(--color-white);
+
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.9rem 1.5rem;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: 0.96rem;
+  }
+}
+
+.greg__check {
+  color: var(--color-red);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.greg__quote {
+  margin: 2.5rem 0 0;
+  padding: 1.5rem 2rem;
+  border-left: 6px solid var(--color-red);
+  background: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.greg__closing {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  color: var(--color-muted);
+  max-width: 46rem;
+}
+
+@media (max-width: 860px) {
+  .greg__body {
+    grid-template-columns: 1fr;
+  }
+
+  .greg__beliefs ul {
+    grid-template-columns: 1fr;
+  }
+}

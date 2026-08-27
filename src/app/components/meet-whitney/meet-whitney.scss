@@ -1,0 +1,136 @@
+.whitney {
+  background: var(--color-white);
+  padding-block: var(--space-section);
+}
+
+.whitney__grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+
+.whitney__media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.whitney__photo {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  background: linear-gradient(155deg, var(--color-navy-light), var(--color-navy));
+  border: 6px solid var(--color-navy-light);
+  outline: 3px solid var(--color-red);
+  outline-offset: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whitney__photo-initial {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.whitney__facts {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.92rem;
+    color: var(--color-muted);
+    padding: 0.65rem 0.9rem;
+    background: var(--color-offwhite);
+    border-radius: var(--radius-sm);
+  }
+}
+
+.whitney__fact-icon {
+  font-size: 1.1rem;
+}
+
+.whitney__eyebrow {
+  color: var(--color-red);
+}
+
+.whitney__name {
+  color: var(--color-navy);
+  margin-top: 0.6rem;
+}
+
+.whitney__role {
+  margin-top: 0.4rem;
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--color-muted);
+}
+
+.whitney__bio {
+  margin: 1.75rem 0 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--color-red);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  border-left: 6px solid var(--color-navy);
+}
+
+.whitney__pledge {
+  margin-top: 2rem;
+  color: var(--color-navy);
+  font-size: 1.3rem;
+}
+
+.whitney__priorities {
+  margin-top: 1.25rem;
+  background: var(--color-navy);
+  color: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1.75rem;
+
+  h4 {
+    font-size: 1.05rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1.4rem;
+    font-size: 0.96rem;
+    color: rgba(255, 255, 255, 0.92);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      background: var(--color-red);
+      border-radius: 2px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .whitney__grid {
+    grid-template-columns: 1fr;
+  }
+}

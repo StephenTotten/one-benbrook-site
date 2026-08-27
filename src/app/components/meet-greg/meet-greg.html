@@ -1,0 +1,68 @@
+<section id="meet-greg" class="greg">
+  <div class="container">
+    <div class="greg__header">
+      <p class="eyebrow greg__eyebrow">Meet Your Candidate — Place 4</p>
+      <h2 class="section-heading greg__title">
+        Allow me to introduce <span class="greg__title-accent">myself</span>
+      </h2>
+      <p class="greg__role">Greg Clem for Benbrook City Council, Place 4</p>
+      <p class="greg__intro">
+        For those I haven't had the opportunity to meet, my name is Greg Clem, and
+        I am running for Benbrook City Council, Place 4.
+      </p>
+    </div>
+
+    <div class="greg__body">
+      <div class="greg__col">
+        <h3>A little about me</h3>
+        <ul class="greg__about-list">
+          @for (item of aboutMe; track item.text) {
+            <li>
+              <span class="greg__about-icon" aria-hidden="true">{{ item.icon }}</span>
+              <span>{{ item.text }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div class="greg__col">
+        <div class="greg__photo" role="img" aria-label="Greg Clem portrait">
+          <!-- Swap this placeholder for public/images/greg-photo.jpg -->
+          <span>GC</span>
+        </div>
+
+        @for (paragraph of involvement; track paragraph) {
+          <p class="greg__paragraph">{{ paragraph }}</p>
+        }
+      </div>
+    </div>
+
+    <div class="greg__beliefs">
+      <h3>I believe in:</h3>
+      <ul>
+        @for (belief of beliefs; track belief) {
+          <li>
+            <span class="greg__check" aria-hidden="true">✓</span>
+            <span>{{ belief }}</span>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <blockquote class="greg__quote">
+      Residents shouldn't simply be listened to — they should be heard.
+    </blockquote>
+
+    <div class="greg__closing">
+      <p>
+        My engineering career has taught me to study the details, ask questions,
+        examine the facts, consider the consequences, and make thoughtful
+        decisions. That is the same approach I will bring to City Council.
+      </p>
+      <p>
+        I look forward to meeting more of you, hearing what matters to you and
+        your neighborhood, and earning your trust and support.
+      </p>
+    </div>
+  </div>
+</section>

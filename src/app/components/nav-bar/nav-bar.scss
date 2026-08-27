@@ -1,0 +1,128 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-navy);
+  border-bottom: 3px solid var(--color-red);
+}
+
+.nav__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.25rem;
+}
+
+.nav__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.nav__brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--color-red);
+  font-size: 1rem;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 2px;
+    background: var(--color-white);
+    border-radius: 2px;
+  }
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+
+  a {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.88);
+    padding-block: 0.35rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s ease, border-color 0.15s ease;
+
+    &:hover {
+      color: var(--color-white);
+      border-color: var(--color-red);
+    }
+  }
+}
+
+.nav__cta {
+  background: var(--color-red);
+  color: var(--color-white) !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border-bottom: none !important;
+
+  &:hover {
+    background: var(--color-red-dark);
+  }
+}
+
+@media (max-width: 860px) {
+  .nav__toggle {
+    display: flex;
+  }
+
+  .nav__links {
+    position: absolute;
+    top: 4.25rem;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+    background: var(--color-navy);
+    padding: 1rem 1.5rem 1.5rem;
+    border-bottom: 3px solid var(--color-red);
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+
+    a {
+      width: 100%;
+      padding-block: 0.6rem;
+    }
+  }
+
+  .nav__links--open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .nav__cta {
+    margin-top: 0.35rem;
+  }
+}
