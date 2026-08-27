@@ -1,20 +1,19 @@
 <section id="meet-whitney" class="whitney">
   <div class="container whitney__grid">
     <div class="whitney__media">
-      <!-- Swap this placeholder for public/images/whitney-photo.jpg -->
       <div class="whitney__photo" role="img" aria-label="Whitney Hughes outside Benbrook City Hall">
         <img src="/images/whit-headshot.jpeg">
       </div>
-
-      <ul class="whitney__facts">
-        @for (fact of facts; track fact.label) {
-          <li>
-            <span class="whitney__fact-icon" aria-hidden="true">{{ fact.icon }}</span>
-            <span>{{ fact.label }}</span>
-          </li>
-        }
-      </ul>
     </div>
+
+    <ul class="whitney__facts">
+      @for (fact of facts; track fact.label) {
+        <li>
+          <span class="whitney__fact-icon" aria-hidden="true">{{ fact.icon }}</span>
+          <span>{{ fact.label }}</span>
+        </li>
+      }
+    </ul>
 
     <div class="whitney__content">
       <p class="eyebrow whitney__eyebrow">Meet Your Candidate — Place 6</p>

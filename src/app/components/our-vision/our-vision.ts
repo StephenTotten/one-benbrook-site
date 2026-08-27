@@ -13,14 +13,14 @@ interface VisionPillar {
 })
 export class OurVision {
   protected readonly pillars: VisionPillar[] = [
-    { title: 'Prepared leadership', description: 'doing the work before important votes are taken' },
-    { title: 'Clear communication', description: 'explaining decisions in language residents can understand' },
-    { title: 'Consistent standards', description: 'treating every neighborhood fairly and respectfully' },
+    { title: 'Prepared Leadership', description: 'Doing the work before important votes are taken.' },
+    { title: 'Clear Communication', description: 'Explaining decisions in language residents can understand.' },
+    { title: 'Consistent Standards', description: 'Treating every neighborhood fairly and respectfully.' },
     {
-      title: 'Responsible growth',
-      description: "planning carefully for safety, services, infrastructure, and Benbrook's future",
+      title: 'Responsible Growth',
+      description: "Planning carefully for safety, services, infrastructure, and Benbrook's future.",
     },
-    { title: 'Accessible representation', description: 'remaining available and responsive after Election Day' },
-    { title: 'Courage to ask questions', description: 'seeking the information needed before reaching conclusions' },
+    { title: 'Accessible Representation', description: 'Remaining available and responsive after Election Day.' },
+    { title: 'Courage to Ask Questions', description: 'Seeking the information needed before reaching conclusions.' },
   ];
 }
