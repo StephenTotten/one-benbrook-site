@@ -66,44 +66,17 @@
 .vision__cta {
   margin-top: 2.5rem;
   display: flex;
+  justify-content: center;
+}
+
+.vision__yardsign {
+  width: 100%;
+  max-width: 36rem;
   border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.vision__cta-half {
-  flex: 1;
-  padding: 1.5rem 1.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  transition: filter 0.15s ease;
-
-  &:hover {
-    filter: brightness(1.1);
-  }
-}
-
-.vision__cta-half--red {
-  background: var(--color-red);
-}
-
-.vision__cta-half--navy {
-  background: var(--color-navy-light);
-}
-
-.vision__cta-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.vision__cta-name {
-  font-family: var(--font-heading);
-  font-weight: 800;
-  font-size: 1.4rem;
+  border: 6px solid var(--color-navy-light);
+  outline-offset: 6px;
+  display: block;
+  object-fit: cover;
 }
 
 .vision__banner {
@@ -128,9 +101,5 @@
 @media (max-width: 600px) {
   .vision__grid {
     grid-template-columns: 1fr;
-  }
-
-  .vision__cta {
-    flex-direction: column;
   }
 }
