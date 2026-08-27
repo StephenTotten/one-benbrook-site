@@ -1,0 +1,136 @@
+.vision {
+  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+  color: var(--color-white);
+  padding-block: var(--space-section);
+}
+
+.vision__header {
+  max-width: 46rem;
+}
+
+.vision__eyebrow {
+  color: var(--color-red);
+}
+
+.vision__title {
+  margin-top: 0.75rem;
+}
+
+.vision__intro {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 46rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.vision__subhead {
+  margin-top: 3rem;
+  font-size: 1.3rem;
+}
+
+.vision__grid {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.vision__card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1.5rem;
+
+  h4 {
+    font-size: 1.02rem;
+    color: var(--color-white);
+    border-left: 4px solid var(--color-red);
+    padding-left: 0.65rem;
+  }
+
+  p {
+    margin-top: 0.65rem;
+    font-size: 0.92rem;
+    color: rgba(255, 255, 255, 0.72);
+  }
+}
+
+.vision__closing {
+  margin-top: 2.5rem;
+  max-width: 48rem;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.vision__cta {
+  margin-top: 2.5rem;
+  display: flex;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.vision__cta-half {
+  flex: 1;
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  transition: filter 0.15s ease;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
+}
+
+.vision__cta-half--red {
+  background: var(--color-red);
+}
+
+.vision__cta-half--navy {
+  background: var(--color-navy-light);
+}
+
+.vision__cta-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.vision__cta-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+
+.vision__banner {
+  margin-top: 1.5rem;
+  padding: 1.5rem 1.75rem;
+  border: 2px solid var(--color-red);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.04);
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.15rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+@media (max-width: 860px) {
+  .vision__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .vision__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision__cta {
+    flex-direction: column;
+  }
+}

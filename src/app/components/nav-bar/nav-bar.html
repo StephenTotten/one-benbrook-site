@@ -1,0 +1,28 @@
+<header class="nav">
+  <div class="container nav__bar">
+    <a class="nav__brand" href="#home" (click)="closeMenu()">
+      <span class="nav__brand-mark">1</span>
+      <span class="nav__brand-text">One Benbrook</span>
+    </a>
+
+    <button
+      class="nav__toggle"
+      type="button"
+      [attr.aria-expanded]="isMenuOpen()"
+      aria-controls="primary-nav"
+      aria-label="Toggle navigation menu"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="primary-nav" class="nav__links" [class.nav__links--open]="isMenuOpen()">
+      @for (link of links; track link.href) {
+        <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+      }
+      <a class="nav__cta" href="#our-vision" (click)="closeMenu()">Our Vision</a>
+    </nav>
+  </div>
+</header>
