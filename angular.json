@@ -36,6 +36,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/one-benbrook-site/",
               "budgets": [
                 {
                   "type": "initial",
