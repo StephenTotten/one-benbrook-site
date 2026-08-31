@@ -15,10 +15,9 @@ export class NavBar {
   protected readonly isMenuOpen = signal(false);
 
   protected readonly links: NavLink[] = [
-    { label: 'Home', href: '#home' },
-    { label: 'Meet Whitney', href: '#meet-whitney' },
+    { label: 'Home', href: '#' },
     { label: 'Meet Greg', href: '#meet-greg' },
-    { label: 'Our Vision', href: '#our-vision' },
+    { label: 'Meet Whitney', href: '#meet-whitney' },
   ];
 
   toggleMenu(): void {

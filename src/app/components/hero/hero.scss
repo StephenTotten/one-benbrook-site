@@ -1,3 +1,38 @@
+.hero__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: var(--color-red);
+  color: var(--color-white);
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.hero__banner-link {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  opacity: 0.9;
+  white-space: nowrap;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.hero__countdown {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 0.75rem;
+  border-radius: var(--radius-sm);
+}
+
 .hero {
   position: relative;
   background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);

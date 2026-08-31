@@ -1,4 +1,11 @@
-<section id="home" class="hero">
+<div id="home" class="hero__banner">
+  <span>🗳️ Election Day is November 3!</span>
+  @if (countdown$ | async; as c) {
+    <span class="hero__countdown">{{ c.days }}d {{ c.hours }}h {{ c.minutes }}m {{ c.seconds }}s</span>
+  }
+  <a class="hero__banner-link" href="https://www.tarrantcountytx.gov/en/elections.html" target="_blank" rel="noopener">Tarrant County Election Info</a>
+</div>
+<section class="hero">
   <div class="hero__stars" aria-hidden="true">
     @for (star of [1,2,3,4,5,6,7]; track star) {
     <span class="hero__star"></span>
