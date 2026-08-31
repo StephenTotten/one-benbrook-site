@@ -26,7 +26,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npx ng build --configuration production --base-href /one-benbrook-site/
+      - run: npx ng build --configuration production --base-href /
 
       - name: Add SPA fallback
         run: cp dist/onebenbrook/browser/index.html dist/onebenbrook/browser/404.html
