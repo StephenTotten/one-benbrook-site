@@ -1,7 +1,11 @@
 <div id="home" class="hero__banner">
-  <span>🗳️ Election Day is November 3!</span>
-  @if (countdown$ | async; as c) {
-    <span class="hero__countdown">{{ c.days }}d {{ c.hours }}h {{ c.minutes }}m {{ c.seconds }}s</span>
+  @if (isElectionDay()) {
+    <span>🗳️ Today is Election Day! Get out and vote!</span>
+  } @else {
+    <span>🗳️ Election Day is November 3!</span>
+    @if (countdown$ | async; as c) {
+      <span class="hero__countdown">{{ c.days }}d {{ c.hours }}h {{ c.minutes }}m {{ c.seconds }}s</span>
+    }
   }
   <a class="hero__banner-link" href="https://www.tarrantcountytx.gov/en/elections.html" target="_blank" rel="noopener">Tarrant County Election Info</a>
 </div>

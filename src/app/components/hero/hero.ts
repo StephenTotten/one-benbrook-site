@@ -14,6 +14,12 @@ interface Countdown {
 })
 export class Hero {
   private readonly electionDay = new Date('2026-11-03T06:01:00Z');
+  private readonly electionDayEnd = new Date('2026-11-04T06:00:00Z');
+
+  readonly isElectionDay = () => {
+    const now = Date.now();
+    return now >= this.electionDay.getTime() && now < this.electionDayEnd.getTime();
+  };
 
   readonly countdown$: Observable<Countdown> = interval(1000).pipe(
     startWith(0),
