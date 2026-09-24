@@ -1,28 +1,45 @@
 <section id="meet-greg" class="greg">
-  <div class="container greg__grid">
-    <div class="greg__content">
-      <p class="eyebrow greg__eyebrow">Meet Your Candidate — Place 4</p>
-      <h2 class="section-heading greg__name">Greg Clem</h2>
-      <p class="greg__role">for Benbrook City Council, Place 4</p>
-
-      <blockquote class="greg__bio">
-        @for (paragraph of involvement; track paragraph; let last = $last) {
-          {{ paragraph }}
-          @if (!last) { <br /><br /> }
-        }
-      </blockquote>
-
-      <h3 class="greg__pledge">Residents shouldn't simply be listened to — they should be heard.</h3>
-
-      <div class="greg__priorities">
-        <h4>I believe in:</h4>
-        <ul>
-          @for (belief of beliefs; track belief) {
-            <li>{{ belief }}</li>
-          }
-        </ul>
+  <div class="container">
+    <button class="greg__toggle" (click)="toggle()" [attr.aria-expanded]="isExpanded()" [class.greg__toggle--expanded]="isExpanded()">
+      <div class="greg__toggle-photo">
+        <img src="images/greg-headshot2.jpg" alt="Greg Clem">
       </div>
-    </div>
+      <div class="greg__toggle-text">
+        <p class="eyebrow greg__eyebrow">Meet Your Candidate — Place 4</p>
+        <h2 class="section-heading greg__name">Greg Clem</h2>
+        <p class="greg__role">for Benbrook City Council, Place 4</p>
+      </div>
+      <span class="greg__toggle-action btn btn-primary">
+        <span>{{ isExpanded() ? 'Collapse' : 'Expand' }}</span>
+        <span class="greg__chevron" [class.greg__chevron--open]="isExpanded()">▾</span>
+      </span>
+    </button>
+
+    @if (isExpanded()) {
+      <div class="greg__grid">
+        <div class="greg__content">
+          <p class="eyebrow greg__eyebrow">Meet Your Candidate — Place 4</p>
+          <h2 class="section-heading greg__name">Greg Clem</h2>
+          <p class="greg__role">for Benbrook City Council, Place 4</p>
+
+          <blockquote class="greg__bio">
+            @for (paragraph of involvement; track paragraph; let last = $last) {
+              {{ paragraph }}
+              @if (!last) { <br /><br /> }
+            }
+          </blockquote>
+
+          <h3 class="greg__pledge">Residents shouldn't simply be listened to — they should be heard.</h3>
+
+          <div class="greg__priorities">
+            <h4>I believe in:</h4>
+            <ul>
+              @for (belief of beliefs; track belief) {
+                <li>{{ belief }}</li>
+              }
+            </ul>
+          </div>
+        </div>
 
     <div class="greg__media">
       <div class="greg__photo">
@@ -30,13 +47,15 @@
       </div>
     </div>
 
-    <ul class="greg__facts">
-      @for (item of aboutMe; track item.text) {
-        <li>
-          <span class="greg__fact-icon" aria-hidden="true">{{ item.icon }}</span>
-          <span>{{ item.text }}</span>
-        </li>
-      }
-    </ul>
+        <ul class="greg__facts">
+          @for (item of aboutMe; track item.text) {
+            <li>
+              <span class="greg__fact-icon" aria-hidden="true">{{ item.icon }}</span>
+              <span>{{ item.text }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    }
   </div>
 </section>

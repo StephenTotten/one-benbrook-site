@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 interface FactItem {
   icon: string;
@@ -16,6 +16,8 @@ interface PriorityItem {
   styleUrl: './meet-whitney.scss',
 })
 export class MeetWhitney {
+  protected isExpanded = signal(false);
+  protected toggle() { this.isExpanded.update(v => !v); }
   protected readonly facts: FactItem[] = [
     { icon: '🎓', label: 'Western Hills High School, Class of 2006' },
     { icon: '📘', label: 'University of North Texas — Communication Studies' },

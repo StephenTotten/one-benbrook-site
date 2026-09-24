@@ -63,6 +63,109 @@
   color: rgba(255, 255, 255, 0.82);
 }
 
+.vision__media {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.vision__media-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  height: 100%;
+}
+
+.vision__media-item:last-child .vision__video {
+  flex: 1;
+}
+
+
+.vision__slideshow {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  background: var(--color-navy-dark);
+}
+
+.vision__slide-img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+}
+
+.vision__slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  line-height: 1;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.15s ease;
+  z-index: 1;
+
+  &:hover { background: rgba(0, 0, 0, 0.7); }
+  &--prev { left: 0; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
+  &--next { right: 0; border-radius: var(--radius-sm) 0 0 var(--radius-sm); }
+}
+
+.vision__slide-counter {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: var(--color-white);
+  font-size: 0.78rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.vision__slide-dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.6rem 0.5rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.vision__slide-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.35);
+  padding: 0;
+  transition: background 0.15s ease;
+
+  &--active { background: var(--color-red); }
+  &:hover { background: rgba(255, 255, 255, 0.7); }
+}
+
+.vision__video {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-md);
+  border: 2px solid rgba(255, 255, 255, 0.14);
+  display: block;
+  object-fit: cover;
+}
+
 .vision__cta {
   margin-top: 2.5rem;
   display: flex;
@@ -95,6 +198,10 @@
 @media (max-width: 860px) {
   .vision__grid {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .vision__media {
+    grid-template-columns: 1fr;
   }
 }
 

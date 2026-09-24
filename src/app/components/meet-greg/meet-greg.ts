@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 interface AboutItem {
   icon: string;
@@ -12,6 +12,8 @@ interface AboutItem {
   styleUrl: './meet-greg.scss',
 })
 export class MeetGreg {
+  protected isExpanded = signal(false);
+  protected toggle() { this.isExpanded.update(v => !v); }
   protected readonly aboutMe: AboutItem[] = [
     {
       icon: '📍',

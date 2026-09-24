@@ -50,6 +50,29 @@
       City Council.
     </p>
 
+    <div class="vision__media">
+      <div class="vision__media-item">
+        <h3 class="vision__subhead">Rally Presentation</h3>
+        <div class="vision__slideshow">
+          <button class="vision__slide-btn vision__slide-btn--prev" (click)="prev()" aria-label="Previous slide">&#8249;</button>
+          <img class="vision__slide-img" [src]="slides[current()]" [alt]="'Slide ' + (current() + 1)">
+          <button class="vision__slide-btn vision__slide-btn--next" (click)="next()" aria-label="Next slide">&#8250;</button>
+          <div class="vision__slide-counter">{{ current() + 1 }} / {{ totalSlides }}</div>
+          <div class="vision__slide-dots">
+            @for (slide of slides; track $index) {
+              <button class="vision__slide-dot" [class.vision__slide-dot--active]="current() === $index" (click)="goTo($index)" [attr.aria-label]="'Go to slide ' + ($index + 1)"></button>
+            }
+          </div>
+        </div>
+      </div>
+      <div class="vision__media-item">
+        <h3 class="vision__subhead">Rally Video</h3>
+        <video class="vision__video" controls preload="metadata">
+          <source src="videos/Clem Hughes Rally Presentation.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
     <div class="vision__cta">
       <img class="vision__yardsign" src="images/yardsign.jpeg" alt="Greg Clem and Whitney Hughes yard sign">
     </div>
