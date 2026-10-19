@@ -1,12 +1,17 @@
 .chat-widget {
   position: fixed;
   bottom: 16px;
-  right: 16px;
-  z-index: 1000;
+  right: 12px;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
+  pointer-events: none;
+
+  > * {
+    pointer-events: auto;
+  }
 }
 
 .chat-fab {
@@ -30,12 +35,8 @@
   background: white;
   border-radius: 12px;
   padding: 20px;
-  width: 300px;
+  width: min(300px, calc(100vw - 24px));
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 400px) {
-    width: calc(100vw - 32px);
-  }
 
   form {
     display: flex;
