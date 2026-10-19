@@ -1,6 +1,7 @@
 .greg {
   background: var(--color-offwhite);
   padding-block: var(--space-section);
+  overflow: hidden;
 }
 
 .greg__toggle {
@@ -219,7 +220,7 @@
   .greg__facts   { order: 3; }
 
   .greg__photo {
-    width: 15rem;
-    height: 15rem;
+    width: min(15rem, 100%);
+    height: min(15rem, 100vw);
   }
 }

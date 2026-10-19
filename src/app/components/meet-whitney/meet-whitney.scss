@@ -1,6 +1,7 @@
 .whitney {
   background: var(--color-white);
   padding-block: var(--space-section);
+  overflow: hidden;
 }
 
 .whitney__toggle {
@@ -226,7 +227,7 @@
   .whitney__facts   { order: 3; }
 
   .whitney__photo {
-    width: 15rem;
-    height: 15rem;
+    width: min(15rem, 100%);
+    height: min(15rem, 100vw);
   }
 }
