@@ -209,6 +209,18 @@
 }
 
 @media (max-width: 860px) {
+  .whitney__toggle {
+    flex-wrap: wrap;
+
+    .whitney__toggle-action {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 0.75rem;
+    }
+  }
+
   .whitney__grid {
     grid-template-columns: 1fr;
     row-gap: 1.25rem;

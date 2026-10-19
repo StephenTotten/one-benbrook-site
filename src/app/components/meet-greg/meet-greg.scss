@@ -202,6 +202,18 @@
 }
 
 @media (max-width: 860px) {
+  .greg__toggle {
+    flex-wrap: wrap;
+
+    .greg__toggle-action {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      margin-left: 0;
+      margin-top: 0.75rem;
+    }
+  }
+
   .greg__grid {
     grid-template-columns: 1fr;
     row-gap: 1.25rem;
