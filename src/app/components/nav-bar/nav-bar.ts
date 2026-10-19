@@ -1,4 +1,5 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
+import { ChatService } from '../chat-widget/chat.service';
 
 interface NavLink {
   label: string;
@@ -13,6 +14,12 @@ interface NavLink {
 })
 export class NavBar {
   protected readonly isMenuOpen = signal(false);
+  private chat = inject(ChatService);
+
+  openChat() {
+    this.chat.open.set(true);
+    this.closeMenu();
+  }
 
   protected readonly links: NavLink[] = [
     { label: 'Home', href: '#' },

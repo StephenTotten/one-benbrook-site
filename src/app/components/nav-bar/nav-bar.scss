@@ -92,6 +92,19 @@
   }
 }
 
+.nav__ask {
+  background: var(--color-gold, #c8a84b);
+  color: var(--color-navy) !important;
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  border-bottom: none !important;
+  font-weight: 700 !important;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
 @media (max-width: 860px) {
   .nav__toggle {
     display: flex;

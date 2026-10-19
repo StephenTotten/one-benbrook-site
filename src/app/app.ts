@@ -5,10 +5,11 @@ import { MeetWhitney } from './components/meet-whitney/meet-whitney';
 import { MeetGreg } from './components/meet-greg/meet-greg';
 import { OurVision } from './components/our-vision/our-vision';
 import { SiteFooter } from './components/site-footer/site-footer';
+import { ChatWidget } from './components/chat-widget/chat-widget';
 
 @Component({
   selector: 'app-root',
-  imports: [NavBar, Hero, MeetWhitney, MeetGreg, OurVision, SiteFooter],
+  imports: [NavBar, Hero, MeetWhitney, MeetGreg, OurVision, SiteFooter, ChatWidget],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })

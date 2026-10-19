@@ -23,6 +23,7 @@
         <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
       }
       <a class="nav__cta" href="#our-vision" (click)="closeMenu()">Our Vision</a>
+      <a class="nav__ask" href="#" (click)="$event.preventDefault(); openChat()">Ask a Question</a>
     </nav>
   </div>
 </header>

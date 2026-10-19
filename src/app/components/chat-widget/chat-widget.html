@@ -1,0 +1,28 @@
+<div class="chat-widget">
+  <button class="chat-fab" (click)="toggle()" title="Ask the Candidates a Question!">
+    💬
+  </button>
+
+  @if (chat.open()) {
+    <div class="chat-panel">
+      @if (submitted()) {
+        <p class="success-msg">Question submitted successfully! You will get a response via email! Thank you!</p>
+      } @else {
+        <form (ngSubmit)="submit()">
+          <label>Name:
+            <input type="text" [(ngModel)]="name" name="name" required />
+          </label>
+          <label>Email:
+            <input type="email" [(ngModel)]="email" name="email" required />
+          </label>
+          <label>Question:
+            <textarea [(ngModel)]="question" name="question" required rows="4"></textarea>
+          </label>
+          <button type="submit" [disabled]="sending()">
+            {{ sending() ? 'Sending...' : 'Submit' }}
+          </button>
+        </form>
+      }
+    </div>
+  }
+</div>
